@@ -1,0 +1,325 @@
+/* these are all the media queries for index.html page with the desktop first approach*/
+
+@media screen and (max-width: 1200px) {
+	/* reduced size of search bar */
+	.website-name {
+		font-size: 0.5em;
+	}
+	input {
+		font-size: 8px !important;
+	}
+
+	.sign-in-option div:nth-child(1){
+		margin-left: 20px;
+		padding: 3px 7px ;
+		font-size: 15px;
+		background-color: black;
+		border-radius: 5px;
+	}
+	.sign-in-option div:nth-child(2){
+		display: none;
+	}
+/*
+	.sign-in-option div:nth-child(1){
+		margin-left: 30px;
+		padding: 3px 7px ;
+		font-size: 15px;
+		background-color: black;
+		border-radius: 5px;
+	}
+	.sign-in-option div:nth-child(2){
+		position: relative;
+		left: 50px;
+	}
+	*/
+}
+@media screen and (max-width: 900px) {
+	.website-name {
+		font-size: 0.6em;
+	}
+
+	.horizontal-list a{
+		font-size: 15px;
+	}
+	.horizontal-list li:nth-child(3){
+		display: none;
+	}
+	/*Sign-in button will disappear*/
+	.sign-in-option div:nth-child(1){
+		margin-left: 20px;
+		padding: 3px 7px ;
+		font-size: 15px;
+		background-color: black;
+		border-radius: 5px;
+	}
+	/*.sign-in-option div:nth-child(2){
+		display: none;
+	}*/
+	input::placeholder{
+		color: transparent;
+	}
+
+	/* more button will ve visible and section 2 will be hidden by default for this viewport */
+	label[for="more"] {
+		display: block;
+	}
+	/* hidden section 2 by default */
+	.section-2 {
+		visibility: hidden;
+		opacity: 0;
+		position: absolute;
+		width: 300px;
+		height: 66vh;
+		background-color: black;
+		opacity: 0.7;
+		border-radius: 15px;
+		box-shadow: 0px 0px 2px 1px white;
+		right: 0px;
+		top: 23.5%;
+		z-index: 5;
+		overflow: scroll;
+		padding-left:10px;
+		transition: visibility ease-in-out 0.5s;
+		transition: opacity ease-in-out 0.5s;
+	}
+	.playlist-content {
+		overflow: visible;
+	}
+	/* re-adjusted the queue options box */
+	.queue-options {
+		position: absolute;
+		height: auto;
+		width: auto;
+		top: 7%;
+		right: 0%;
+	}
+	/* more button */
+	input[id="more"]:checked ~ .section-2 {
+		visibility: visible;
+		opacity: 1;
+	}
+	/* hide section 2 scrollbar */
+	.section-2::-webkit-scrollbar {
+		display: none;
+	}
+
+	.playlist-content {
+		overflow: visible;
+	}
+
+	
+	/* when the section 2 is hidden, section-1 width becomes 100% to cover the whole page */
+	.section-1 {
+		width: 100%;
+	}
+	.card {
+		min-width: 250px; /* to apply the flex effect */
+	}
+	/* carousel adjustment */
+	.outer-carousel {
+		height: 9%;
+	}
+	/* carousel image */
+	.carousel img {
+		height: 23vw;
+		width: 34.5vw;
+	}
+	/* first and 3rd images of the carousel */
+	.carousel img:nth-child(1) {
+		left: 56vw;
+	}
+	.carousel img:nth-child(3) {
+		right: 56vw;
+	} /* since the size of the carousel images is increased, the hover size should also be increased */
+	.carousel img:hover {
+		height: 27vw;
+		width: 40.5vw;
+	}
+	/* music themes section */
+	.music-moods-container {
+		justify-content: space-around;
+	}
+	.music-moods-main {
+		width: 50%;
+	}
+	/* the radio station logo will disappear */
+	.radio-station{
+		display: none;
+	}
+	/* theme content */
+	/* increased theme content size */
+	.music-moods-main{
+		width: 100%;
+		margin-top: -14%;
+		margin-bottom: 7%;
+	}
+	.music-moods-content {
+		width: 12vw;
+		height: 12vw;
+	}
+	.music-moods-content p {
+		font-size: 3vw;
+		top: -12.5vw;
+	}
+	/* increased music themes image size */
+	.music-moods-container div img {
+		width: 12vw;
+		height: 12vw;
+	}
+
+	/*footer*/
+	/* this is the image in the footer section of the page. due to less space, it has to be removed at such lower resolutions. */
+	/* there is another option, but it will look messy and small */
+	#song-image {
+		display: none;
+	}
+	.song-desc div:nth-child(1){
+		font-size: 14px;
+	}
+	.song-desc div:nth-child(2){
+		font-size: 10px;
+	}
+}
+@media screen and (max-width: 700px) {
+	/* in the screens of this width, generally volume buttons are provided at the side. */
+	/* so there is no need for the volume slider at this width. so i have removed them from the display */
+	/* footer section */
+
+	.website-logo img {
+		height: 30px;
+		width: 30px;
+	}
+	/* website name */
+	.website-name {
+		font-size: 0.6em;
+	}
+
+	.horizontal-list a{
+		font-size: 15px;
+	}
+	.horizontal-list li:nth-child(3){
+		display: none;
+	}
+	/*Sign-in button will disappear*/
+	.sign-in-option div:nth-child(1){
+		margin-left: 20px;
+		padding: 3px 7px ;
+		font-size: 15px;
+		background-color: black;
+		border-radius: 5px;
+	}
+	.sign-in-option div:nth-child(2){
+		display: none;
+	}
+	input::placeholder{
+		color: transparent;
+	}
+
+	/* the radio station logo will disappear */
+	.radio-station{
+		display: none;
+	}
+	.music-moods-main{
+		width: 100%;
+		margin-top: -14%;
+		margin-bottom: 7%;
+	}
+	/* this is the image in the footer section of the page. due to less space, it has to be removed at such lower resolutions. */
+	/* there is another option, but it will look messy and small */
+	#song-image {
+		display: none;
+	}
+	.extra-icons > div:nth-child(3) {
+		display: none;
+	}
+	.extra-icons > div:nth-child(4) {
+		display: none;
+	}
+	.outer-div {
+		width: 36vw;
+		height: 24vw;
+		min-width: 123px;
+		min-height: 82px;
+	}
+	.outer-div .genre-name span {
+		font-size: 4vw;
+	}
+}
+@media screen and (max-width: 550px) {
+	/* this is the most important media query */
+	/* navigation bar section */
+	/* website image */
+	.website-logo img {
+		height: 30px;
+		width: 30px;
+	}
+	/* website name */
+	.website-name {
+		font-size: 0.4em;
+	}
+
+	.horizontal-list a{
+		font-size: 10px;
+	}
+	.horizontal-list li:nth-child(3){
+		display: none;
+	}
+	/*Sign-in button will disappear*/
+	.sign-in-option div:nth-child(1){
+		margin-left: 20px;
+		padding: 3px 7px ;
+		font-size: 15px;
+		background-color: black;
+		border-radius: 5px;
+	}
+	.sign-in-option div:nth-child(2){
+		display: none;
+	}
+	input::placeholder{
+		color: transparent;
+	}
+
+	.music-moods-main {
+		width: 100%;
+	}
+	/* theme content */
+	.music-moods-content {
+		width: 18vw;
+		height: 18vw;
+	}
+	.music-moods-content p {
+		font-size: 4.5vw;
+		top: -18.8vw;
+	}
+	.music-moods-container div img {
+		width: 18vw;
+		height: 18vw;
+	}
+
+	/* stations */
+	/* the radio station logo will disappear */
+	.radio-station{
+		display: none;
+	}
+	.outer-div .genre-name span {
+		font-size: 6vw;
+	}
+	/*footer*/
+	/* this is the image in the footer section of the page. due to less space, it has to be removed at such lower resolutions. */
+	/* there is another option, but it will look messy and small */
+	#song-image {
+		display: none;
+	}
+	.song-desc div:nth-child(1){
+		font-size: 12px;
+	}
+	.song-desc div:nth-child(2){
+		font-size: 8px;
+	}
+	.extra-icons{
+		display: none;
+	}
+	.player{
+		width: 80%;
+	}
+}
