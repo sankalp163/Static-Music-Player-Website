@@ -5,7 +5,7 @@ The repository contains the following files and folders :
 - Two more CSS files for responsiveness : primary-page-style-responsive.css and secondary-page-style-responsive.css
 - Media for the website
 ## About
-The Website has been created from scratch using HTML and CSS with no use of any library or framework.
+The Website has been created from scratch using HTML and CSS with no use of any library or framework. Link :https://sankalp163.github.io/Static-Music-Player-Website/
 ## Images
 -Page 1 <br><br>
 ![screenshot-1](https://user-images.githubusercontent.com/56267419/120844143-9d4b8e80-c58c-11eb-9b32-10e9143f5408.png)
